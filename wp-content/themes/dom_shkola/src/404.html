@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./html/parts/head.html')
+
+<body class="home">
+   <!-- Google Tag Manager (noscript) -->
+   <!-- End Google Tag Manager (noscript) -->
+   <!-- PRELOADER SPINNER
+      ============================================= -->
+   <div id="loader-wrapper"></div>
+   <!-- PAGE CONTENT ============================================= -->
+   <div class="wrapper">
+
+      <!-- HEADER ============================================= -->
+      @@include('./html/components/header.html')
+      <!-- END HEADER -->
+
+      <!-- MAIN ============================================= -->
+      <main class="main default-page page-404" id="main">
+         <!-- hero ============================================= -->
+         <section class="default-page__section page-404__section">
+            <div class="container">
+               <div class="default-page__content page-404__content">
+                  <div class="">
+                     <h1>
+                        Ошибка 404
+                     </h1>
+                  </div>
+                  <br>
+                  <h2>
+                     Упс! Страница не найдена.
+                  </h2>
+                  <p>
+                     Похоже, что страница, которую вы ищете, была перемещена или удалена. Но не волнуйтесь, мы поможем вам найти нужную информацию.
+                  </p>
+                  <ul>
+                     <li>
+                        <a href="">Вернуться на главную страницу</a>
+                     </li>
+                     <li>
+                        <a href="">Связаться с нами</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- END MAIN -->
+
+      <!-- FOOTER ============================================= -->
+      @@include('./html/components/footer.html')
+      <!-- END FOOTER -->
+
+      <!-- popups ============================================= -->
+      @@include('./html/components/popups.html')
+      <!-- end popups -->
+
+   </div>
+
+   <!-- scripts -->
+   @@include('./html/parts/scripts.html')
+</body>
+
+</html>

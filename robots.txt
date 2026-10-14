@@ -1,0 +1,43 @@
+User-agent: *
+Disallow: /wp-
+Disallow: /?
+Disallow: /*?
+Disallow: /&
+Disallow: /*&
+Disallow: /author/
+Disallow: /embed
+Disallow: /page/
+Disallow: /trackback
+Disallow: /tpost/
+Disallow: /category/
+Disallow: /questions/
+Disallow: /teachers/
+Disallow: /schedule/
+Disallow: /free/
+Disallow: /support/
+Disallow: /advantages/
+Disallow: /benefits/
+Disallow: /start/
+Disallow: /banner/
+Disallow: /price/
+Disallow: /search/
+Disallow: /comments/
+
+Allow: /uploads
+Allow: /wp-content/uploads/
+Allow: /*.js
+Allow: /*.css
+Allow: /wp-*.png
+Allow: /wp-*.jpg
+Allow: /wp-*.jpeg
+Allow: /wp-*.gif
+Allow: /wp-*.svg
+Allow: /wp-*.pdf
+Allow: /wp-admin/admin-ajax.php
+
+Crawl-delay: 10
+
+Host: https://dom-shkola.ru
+
+Sitemap: https://dom-shkola.ru/sitemap_index.xml
+

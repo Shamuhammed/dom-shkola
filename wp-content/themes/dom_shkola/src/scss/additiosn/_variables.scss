@@ -1,0 +1,41 @@
+:root {
+   // colors
+   --color-black: #221918;
+   --color-white: #FFFAEE;
+   --color-grey: #666666;
+   --color-orange: #FFC152;
+   --color-green: #A5C784;
+   --color-green-light: #E1E8CB;
+   --color-brown: #D2B48C;
+   --color-brown-light: #F1E5D1;
+   --color-brown-light-2: #FFFAEE;
+   --color-blue: #579AFF;
+   --color-red: #fc2727;
+
+   // fonts
+   --font-1: "Manrope", serif;
+   --font-2: "Druk Wide", serif;
+}
+
+// container templates
+$min-width: 375px;
+$max-w: 1360px;
+$max-d1: $max-w + 80px;
+$max-d2: 992.98px;
+$max-d3: 767.98px;
+$max-d4: 479.98px;
+
+//container
+.container {
+   max-width: $max-d1;
+   margin: 0 auto;
+   padding: 0 40px;
+   width: 100%;
+   height: 100%;
+
+   @media (max-width: $max-d1) {
+      padding: 0 20px;
+   }
+   @media (max-width: $max-d2) {
+   }
+}

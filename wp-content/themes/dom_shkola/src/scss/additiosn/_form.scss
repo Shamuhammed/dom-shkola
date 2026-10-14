@@ -1,0 +1,71 @@
+.wp-custom-form {
+   h3 {
+      position: relative;
+      z-index: 10;
+   }
+   
+   .form-field {
+      margin-bottom: 0 !important;
+
+      &.notvalid {
+         input {
+            border: 1px solid var(--color-red);
+         }
+      }
+   }
+   .form__policy {
+      label {
+         margin-top: 0 !important;
+         padding-left: 28px;
+
+         display: flex;
+         align-items: start;
+         gap: 10px;
+
+         background-color: transparent !important;
+         width: 100%;
+
+         color: var(--color-black);
+         font-family: var(--font-1);
+         font-size: initial;
+
+         &._active {
+            &::before {
+               background-image: url(../img/ok.svg);
+            }
+         }
+
+         &::before {
+            z-index: 9;
+            left: 0;
+            top: 5px;
+            transform: translate(0, 0);
+            border-radius: 3px;
+            overflow: hidden;
+
+            width: 18px;
+            height: 18px;
+            background-color: var(--color-brown-light);
+            background-image: none;
+            opacity: 1;
+
+            cursor: pointer;
+         }
+
+         span {
+            display: block;
+         }
+
+         input {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            transform: translate(0, 0);
+
+            width: 18px;
+            height: 18px;
+            opacity: 0;
+         }
+      }
+   }
+}
