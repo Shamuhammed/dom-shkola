@@ -4,7 +4,7 @@
    &__inner {
       position: relative;
       padding: 0 40px 40px;
-      background-color: var(--color-broun-light);
+      background-color: var(--color-brown-light);
       border-radius: 0 0 40px 40px;
 
       a {
@@ -20,7 +20,7 @@
       width: 22%;
       height: 42px;
       border-radius: 40px 40px 0 0;
-      background-color: var(--color-broun-light);
+      background-color: var(--color-brown-light);
 
       position: absolute;
       top: 0;
@@ -48,7 +48,7 @@
          }
 
          &::before {
-            background-color: var(--color-broun-light);
+            background-color: var(--color-brown-light);
 
             z-index: 1;
          }
