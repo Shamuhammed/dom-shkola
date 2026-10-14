@@ -17,6 +17,10 @@ export function custumScripts() {
             IMask(phoneInputs[i], maskOptions);
         }
 
+        // policy checkbox checked by default; form-policy нужен плагину для текста ошибки
+        $('.form-sec__privacy').addClass('form-policy');
+        $('.form-sec__privacy input[type="checkbox"], .form-sec input[type="checkbox"]').prop('checked', true);
+
         // Определяем поддержку формата WEBP
         function checkWebPSupport(status) {
             status = status === true ? "webp" : "no-webp";

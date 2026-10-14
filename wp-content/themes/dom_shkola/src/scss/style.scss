@@ -1539,6 +1539,15 @@ body {
 
    &__content {
       max-width: 50%;
+      margin-top: 40px;
+
+      @media (max-width: 987px) {
+         margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+         margin-top: 0;
+      }
 
       h3 {
          position: relative;
