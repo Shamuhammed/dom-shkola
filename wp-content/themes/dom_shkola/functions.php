@@ -141,31 +141,26 @@ add_action( 'widgets_init', 'dom_shkola_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dom_shkola_scripts() {
-	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/assets/css/fonts.min.css', '1.0.0');
-	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.min.css', '1.0.0');
-	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.min.css', '1.0.0');
+	$asset_ver = static function ( $relative ) {
+		$path = get_template_directory() . $relative;
 
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.1.0');
+		return is_readable( $path ) ? (string) filemtime( $path ) : null;
+	};
+
+	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/assets/css/fonts.min.css', array(), $asset_ver( '/assets/css/fonts.min.css' ) );
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.min.css', array(), $asset_ver( '/assets/css/slick.min.css' ) );
+	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.min.css', array(), $asset_ver( '/assets/css/magnific-popup.min.css' ) );
+
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css', array(), $asset_ver( '/assets/css/style.min.css' ) );
 
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', false, null, true );
-	
+	wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', false, $asset_ver( '/assets/js/jquery.min.js' ), true );
+
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'imask', get_template_directory_uri() . '/assets/js/imask.min.js', array('jquery'), '1.0.0', true );
-	// wp_enqueue_script( 'imask', 'https://unpkg.com/imask', array('jquery'), '1.0.0', true );
-	
-	// wp_enqueue_script( 'imagelazy', get_template_directory_uri() . '/assets/js/min/imagelazy.min.js', array('jquery'), '1.0.0', true );
-	/*
-	wp_enqueue_script( 'accordeon', get_template_directory_uri() . '/assets/js/min/accordeon.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'ajax', get_template_directory_uri() . '/assets/js/min/ajax.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'top-menu', get_template_directory_uri() . '/assets/js/min/top-menu.min.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'popups', get_template_directory_uri() . '/assets/js/min/popups.min.js', array('jquery', 'magnific-popup'), '1.0.0', true );
-	wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/min/script.min.js', array('jquery', 'imask'), '1.0.2', true );
-	wp_enqueue_script( 'sliders', get_template_directory_uri() . '/assets/js/min/sliders.min.js', array('jquery', 'slick'), '1.0.0', true );
-	*/
-	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.min.js', array('jquery', 'slick', 'magnific-popup', 'imask'), '1.0.0', true );
+	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), $asset_ver( '/assets/js/jquery.magnific-popup.min.js' ), true );
+	wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), $asset_ver( '/assets/js/slick.min.js' ), true );
+	wp_enqueue_script( 'imask', get_template_directory_uri() . '/assets/js/imask.min.js', array( 'jquery' ), $asset_ver( '/assets/js/imask.min.js' ), true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.min.js', array( 'jquery', 'slick', 'magnific-popup', 'imask' ), $asset_ver( '/assets/js/app.min.js' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'dom_shkola_scripts' );
 
