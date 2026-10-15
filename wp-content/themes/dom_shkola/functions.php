@@ -145,7 +145,7 @@ function dom_shkola_scripts() {
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/slick.min.css', '1.0.0');
 	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.min.css', '1.0.0');
 
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css', '1.0.8');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.1.0');
 
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', false, null, true );

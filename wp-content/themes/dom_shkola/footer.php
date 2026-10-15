@@ -68,16 +68,30 @@
 									$logo_url = has_custom_logo() ? $logo[0] : '';
 								   if ($logo_url) {
 										?>
-											<img class="lazy" width="50" height="50" data-src="<?php echo esc_url($logo_url); ?>" alt="Российская онлайн-школа с 1 по 11 класс">
+											<img class="lazy" width="40" height="40" data-src="<?php echo esc_url($logo_url); ?>" alt="Российская онлайн-школа с 1 по 11 класс">
 										<?php
 									} else {
 										?>
-											<img class="lazy" width="50" height="50" data-src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg" alt="Российская онлайн-школа с 1 по 11 класс">
+											<img class="lazy" width="40" height="40" data-src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg" alt="Российская онлайн-школа с 1 по 11 класс">
 										<?php
 									}
 								?>
                         </a>
-                        <h2><?php echo $footer_slogan; ?></h2>
+                        <p><?php echo $footer_slogan; ?></p>
+                     </div>
+                     <div class="footer__info">
+                        <p>
+                           Образовательные услуги оказывает:<br>
+                           ЧУ ДО «ОНЛАЙН-ШКОЛА № 1»<br>
+                           ОГРН 1247700392147<br>
+                           ИНН 7708436887<br>
+                           КПП 770801001
+                        </p>
+                        <p>
+                           Эл. почта: <a href="mailto:info@os-1.online">info@os-1.online</a><br>
+                           Телефон: <a href="tel:+79818000192">+7 981 800-01-92</a><br>
+                           Официальный сайт образовательной организации: <a href="https://os-1.online" target="_blank" rel="noopener noreferrer">os-1.online</a>
+                        </p>
                      </div>
                   </div>
                   <div class="footer__col footer-nav _animate _fadein" data-delay="3">
@@ -150,15 +164,12 @@
                <div class="footer__bottom-row">
                   <p class="footer__copy">
                      ©️ <?php echo $year_foundation . ' - ' . date("Y") . ', ' . $footer_org; ?>
-                  </p>            
-                  <p class="footer__docs">
-                     <!-- <a href="<?php echo get_permalink(53); ?>">
-                        Договор оферты
-                     </a> -->
-                     <a href="<?php echo get_privacy_policy_url(); ?>">
-                        Политика конфиденциальности
-                     </a>
                   </p>
+               </div>
+               <div class="footer__row footer__docs">
+                  <a target="_blank" rel="noopener noreferrer" href="https://os-1.online/terms/">Сведения об образовательной организации</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://islod.obrnadzor.gov.ru/rlic/details/7d6093b6-a7f5-764c-0246-87960a2934c8/?roistat_visit=24190735">Лицензия</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://os-1.online/policy/">Политика обработки персональных данных</a>
                </div>
             </div>
          </div>
